@@ -6,7 +6,7 @@
 /*   By: vgallois <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/23 17:42:59 by vgallois          #+#    #+#             */
-/*   Updated: 2017/10/25 19:40:41 by vgallois         ###   ########.fr       */
+/*   Updated: 2017/10/27 18:37:07 by vgallois         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int		main(int argc, char **argv)
 	if ((argc != 2) || (((ft_strcmp(argv[1], "mandelbrot")))
 				&& (ft_strcmp(argv[1], "julia"))
 				&& (ft_strcmp(argv[1], "burningship"))))
-		return (die("usage:./fractol fractal\nfractal =\tmandelbrot\n\t\tjulia\n \t\tburningship"));
+		return (die("usage:./fractol fractal_name"));
 	f = fractal_match(argv[1]);
 	if (f->name == NULL)
 		return (die("wrong argument."));

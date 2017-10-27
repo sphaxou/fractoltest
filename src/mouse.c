@@ -6,7 +6,7 @@
 /*   By: vgallois <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/23 23:09:47 by vgallois          #+#    #+#             */
-/*   Updated: 2017/10/25 17:54:29 by vgallois         ###   ########.fr       */
+/*   Updated: 2017/10/27 18:38:36 by vgallois         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,8 @@ int		hook_mousemove(int x, int y, t_mlx *mlx)
 			/ WIN_HEIGHT * h;
 	}
 	else if (mlx->mouse.isdown & (1 << 2))
-		zoom(x, y, &mlx->viewport, mlx->mouse.lasty > mlx->mouse.y ? ZOOM : 1 /ZOOM);
+		zoom(x, y, &mlx->viewport,
+				mlx->mouse.lasty > mlx->mouse.y ? 1 / ZOOM : ZOOM);
 	if (mlx->mouse.isdown || (mlx->fractal->mouse && !mlx->mouselock))
 		render(mlx);
 	return (0);
