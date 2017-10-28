@@ -1,0 +1,5 @@
+{
+    name: "fractol",
+    files: [ "src/*/*.c", "src/*.c", "includes/*.h", "libft/*.c", "libft/*.h" ],
+    main: "main"
+}
